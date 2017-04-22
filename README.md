@@ -1,7 +1,7 @@
 # storj-upload
-PowerShell script for uploading the folder
+`upload.ps1` This is a PowerShell script for uploading files from folders to existing buckets with same name, as folder name.
 Uploads all files to the existing buckets at Storj network.
-Script use the folders names for searching the existing bucket with such name and serach, which files is not exists in this bucket and upload it to this bucket.
+Script use the folders names for searching the existing buckets with such name and serach within not uploaded files than uploads.
 
 ## Usage
 `$Env:STORJ_KEYPASS = <your password for unlocking yours key from Storj>`
