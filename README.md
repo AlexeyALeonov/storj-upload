@@ -10,7 +10,7 @@ The script uses buckets names like folder names and checks for the presence of t
 
 ## Usage
 1. `$Env:STORJ_KEYPASS = "<your password for unlocking yours key from Storj>"`
-2. `upload.ps1` \[`-Path <folder to scan>`\]\[`-Storj <path to the storj.exe>\]
+2. `upload.ps1` \[`-Path <folder to scan>`\]\[`-Storj <path to the storj.exe>`\]
 
 If Path doesn't specified, it would be a current folder.
 If Storj doesn't specified, it search for `storj.exe` in home folder (`~\storj.exe`)
