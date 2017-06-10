@@ -3,12 +3,17 @@
 Uploads all files to the existing buckets at Storj network.
 The script uses buckets names like folder names and checks for the presence of the same files in the bucket. If it does not find the files, it uploads them.
 
+## Setup PowerShell execution policy
+1. Open PowerShell as Administrator
+2. Execute:
+`Set-ExecutionPolicy -ExecutionPolicy Unrestricted`
+
 ## Usage
-`$Env:STORJ_KEYPASS = "<your password for unlocking yours key from Storj>"`
+1. `$Env:STORJ_KEYPASS = "<your password for unlocking yours key from Storj>"`
+2. `upload.ps1` \[`-Path <folder to scan>`\]\[`-Storj <path to the storj.exe>\]
 
-`upload.ps1` \[`-Path <folder to scan>`\]
-
-If Path is not specified, then it would be a current folder.
+If Path doesn't specified, it would be a current folder.
+If Storj doesn't specified, it search for `storj.exe` in home folder (`~\storj.exe`)
 
 # Support
 If you want any new feature or you have found a bug, please submit an issue or create a pull request containing fix.
