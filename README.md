@@ -11,14 +11,17 @@ The script uses buckets names like folder names and checks for the presence of t
 `Unblock-file upload.ps1`
 
 ## Usage
-1. `$Env:STORJ_KEYPASS = "<your password for unlocking yours key from Storj>"`
-2. `upload.ps1` \[`-Path <folder to scan>`\]\[`-Storj <path to the storj.exe>`\]\[-UseItAsBucket\]
+1. `$Env:STORJ_KEYPASS = '<your password for unlocking yours key from Storj>'`
+2. `upload.ps1` \[`-Path <folder to scan>`\]\[`-Storj <path to the storj.exe>`\]\[-UseItAsBucket\]\['-MinimalMirrors <value>'\]
 
-`-Path` If Path doesn't specified, it would be a current folder.
-
-`-Storj` If Storj doesn't specified, it search for `storj.exe` in home folder (`~\storj.exe`)
-
-`-UseItAsBucket`Using the base name of the Path as name of the bucket
+* `-Path path\to\folder`
+    * Synchronizing path. Current folder by default
+* `-UseItAsBucket`
+    * Using the base name of the `-Path` as name of the bucket
+* `-Storj path\To\Storj.exe`
+    * Full path to Storj CLI. `~\storj.exe` by default
+* `-MinimalMirrors <value>`
+    * 2 by default
 
 # Support
 If you want any new feature or you have found a bug, please submit an issue or create a pull request containing fix.
