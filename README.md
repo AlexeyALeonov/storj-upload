@@ -1,5 +1,8 @@
 # storj-upload
-`upload.ps1` This is a PowerShell script for uploading files from folders to existing buckets with same name, as folder name.
+This project with scripts for upload and download from Storj Network
+
+# [upload.ps1](/upload.ps1)
+PowerShell script for uploading files from folders to existing buckets with same name, as folder name.
 Uploads all files to the existing buckets at Storj network.
 The script uses buckets names like folder names and checks for the presence of the same files in the bucket. If it does not find the files, it uploads them.
 
@@ -22,6 +25,24 @@ The script uses buckets names like folder names and checks for the presence of t
     * Full path to Storj CLI. `~\storj.exe` by default
 * `-MinimalMirrors <value>`
     * 2 by default
+
+# [isDownloadable.ps1](/isDownloadable.ps1)
+PowerShell script for trying downloading files from buckets.
+This is proof of retrievability files from buckets.
+
+## Setup PowerShell execution policy
+1. Open PowerShell as Administrator
+2. Execute:
+`Set-ExecutionPolicy -ExecutionPolicy Unrestricted`
+3. Execute:
+`Unblock-file upload.ps1`
+
+## Usage
+1. `$Env:STORJ_KEYPASS = '<your password for unlocking yours key from Storj>'`
+2. `isDownloadable.ps1` \[`-Storj <path to the storj.exe>`\]
+
+* `-Storj <path to the storj.exe>`
+    * Full path to Storj CLI. `~\storj.exe` by default
 
 # Support
 If you want any new feature or you have found a bug, please submit an issue or create a pull request containing fix.
