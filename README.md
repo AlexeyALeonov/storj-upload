@@ -12,7 +12,7 @@ The script uses buckets names like folder names and checks for the presence of t
 
 ## Usage
 1. `$Env:STORJ_KEYPASS = '<your password for unlocking yours key from Storj>'`
-2. `upload.ps1` \[`-Path <folder to scan>`\]\[`-Storj <path to the storj.exe>`\]\[-UseItAsBucket\]\['-MinimalMirrors <value>'\]
+2. `upload.ps1` \[`-Path <folder to scan>`\]\[`-Storj <path to the storj.exe>`\]\[`-UseItAsBucket`\]\[`-MinimalMirrors <value>`\]
 
 * `-Path path\to\folder`
     * Synchronizing path. Current folder by default
