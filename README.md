@@ -2,8 +2,8 @@
 This project with scripts for upload and download from Storj Network
 
 # [upload.ps1](/upload.ps1)
-PowerShell script for uploading files from folders to existing buckets with same name, as folder name.
-Uploads all files to the existing buckets at Storj network.
+PowerShell script for uploading files from folders to buckets with same name, as folders name.
+Uploads all files to the buckets at Storj network.
 The script uses buckets names like folder names and checks for the presence of the same files in the bucket. If it does not find the files, it uploads them.
 
 ## Setup PowerShell execution policy
@@ -43,6 +43,13 @@ This is proof of retrievability files from buckets.
 
 * `-Storj <path to the storj.exe>`
     * Full path to Storj CLI. `~\storj.exe` by default
+
+# [upload.sh](/upload.sh)
+Bash script for uploading files from current directory to buckets with same name, as folders name.
+
+## Uasge
+1. `STORJ_KEYPASS='<your password for unlocking yours key from Storj>'`
+2. `upload.sh`
 
 # Support
 If you want any new feature or you have found a bug, please submit an issue or create a pull request containing fix.
