@@ -48,8 +48,13 @@ This is proof of retrievability files from buckets.
 Bash script for uploading files from current directory to buckets with same name, as folders name.
 
 ## Uasge
-1. `STORJ_KEYPASS='<your password for unlocking yours key from Storj>'`
-2. `upload.sh`
+1. Create the file `~/.storj.` with:
+```
+STORJ_KEYPASS='<your password for unlocking yours key from Storj>'
+```
+2. Go to the folder, which content you want to upload
+`cd Photo`
+3. `upload.sh`
 
 # Support
 If you want any new feature or you have found a bug, please submit an issue or create a pull request containing fix.
