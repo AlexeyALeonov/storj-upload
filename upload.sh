@@ -1,4 +1,5 @@
 #/bin/bash
+. ~/.storj.
 IFS=$'\n'
 
 for dir in *
