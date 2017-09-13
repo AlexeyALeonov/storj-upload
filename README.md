@@ -50,7 +50,7 @@ Bash script for uploading files from current directory to buckets with same name
 ## Uasge
 1. Create the file `~/.storj.` with:
 ```
-STORJ_KEYPASS='<your password for unlocking yours key from Storj>'
+export STORJ_KEYPASS='<your password for unlocking yours key from Storj>'
 ```
 2. Go to the folder, which content you want to upload
 `cd Photo`
