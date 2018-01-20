@@ -10,7 +10,7 @@ do
 	if [ "$bucketId" ]
 	then
 		dateCreate=`echo $bucket | awk '{print $6}'`
-		if [[ $(($curDate - `date -d $dateCreate +%s`)) > $((60*60*24*90)) ]]
+		if [[ $(($curDate - `date -d $dateCreate +%s`)) -gt $((60*60*24*90)) ]]
 		then
 			eval 'storj remove-bucket $bucketId'
 			unset bucketId
@@ -36,7 +36,7 @@ do
 		if [ "$bucketFileId" ]
 		then
 			countMirrors=`storj list-mirrors "$bucketId" "$bucketFileId" | grep -ic "nodeId"`
-			if [[ $countMirrors -lt 5 || $(($curDate - `date -d $bucketFileCreateDate +%s`)) > $((60*60*24*90)) ]]
+			if [[ $countMirrors -lt 5 || $(($curDate - `date -d $bucketFileCreateDate +%s`)) -gt $((60*60*24*90)) ]]
 			then
 				echo "Mirrors: $countMirrors date $(date -d $bucketFileCreateDate -Ins)"
 				eval 'storj remove-file $bucketId $bucketFileId'
