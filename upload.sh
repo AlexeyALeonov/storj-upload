@@ -47,7 +47,7 @@ do
 		if [ -z "$bucketFileId" ]
 		then
 #			echo "File not found. Will upload"
-       			eval 'storj upload-file $bucketId "$file"'
+       			eval 'storj upload-file $bucketId "$file" &'
 		fi
 	done
 done
